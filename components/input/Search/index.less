@@ -1,0 +1,25 @@
+@import "../../../styles/color";
+.wy-input-search{
+  display: inline-block;
+  background: @content-white;
+  border: @border solid thin;
+  border-radius: .16rem;
+  padding: 0 .06rem;
+  margin: .1rem;
+  width: calc(100% - 0.2rem);
+  .wy-input-search-icon{
+    cursor: pointer;
+  }
+  input{
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border-radius: .04rem;
+    font-size: .14rem;
+    height: .3rem;
+    padding: .02rem .1rem;
+    background: @transparent;
+    width: calc(100% - 0.28rem);
+  }
+}

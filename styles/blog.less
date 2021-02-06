@@ -1,0 +1,79 @@
+@import "color";
+.container {
+  min-width: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 12rem;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: .2rem;
+  .wy-blog,.wy-blog-other{
+    overflow: hidden;
+  }
+  .wy-blog{
+    background: @white;
+  }
+  .wy-blog-list{
+    margin: .1rem;
+    width: calc(100% - 0.2rem);
+    padding: .1rem;
+    border-bottom: @border solid thin;
+    .wy-blog-title{
+      font-size: .16rem;
+      width: 100%;
+      margin-bottom: .1rem;
+      display: block;
+      overflow : hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &:hover{
+        color: @active;
+        text-decoration: underline;
+      }
+    }
+    .wy-blog-abbinfo{
+      font-size: 0.14rem;
+      color: @abbr;
+      line-height: 22px;
+      height: 66px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+  .wy-blog-category{
+    max-height: 7rem;
+    overflow: auto;
+    background: @white;
+    margin-bottom: .2rem;
+    .wy-blog-category-title{
+      display: block;
+      height: .4rem;
+      background: @active;
+      color: @white;
+      line-height: .4rem;
+      padding-left: .1rem;
+    }
+    ul{
+      li{
+        font-size: .16rem;
+        line-height: .35rem;
+        padding: .05rem .1rem;
+        list-style: none;
+        cursor: pointer;
+        &:hover{
+          background: lighten(@active,45%);
+          color: @active;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,9 @@
-import '../styles/globals.css'
-
+import '../styles/globals.less'
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <>
+    <script src="/svg.js"></script>
+    <Component {...pageProps} />
+    </>
 }
 
 export default MyApp
